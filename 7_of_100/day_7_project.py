@@ -1,6 +1,7 @@
 # Step 4
 
 import random
+from replit import clear
 from day_7_art import stages, logo
 from dictionary import word_list
 
@@ -20,7 +21,7 @@ print(f"\nHidden word consist of {length} letters\n")
 is_game = True
 while is_game:
     guess = input("Give a letter: ").lower()
-
+    clear()
     if guess in used_letters:
         guess = input("This letter is already used\nGive another letter: ").lower()
     else:
