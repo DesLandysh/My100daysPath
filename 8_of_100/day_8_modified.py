@@ -7,7 +7,7 @@ def cipher(txt, code, sign):
             if sign:
                 cipher_txt += alphabet[(alphabet.index(letter) + code) % len(alphabet)]  # stolen variant (... % 26)
             else:
-                cipher_txt += alphabet[alphabet.index(letter) - code % len(alphabet)]
+                cipher_txt += alphabet[(alphabet.index(letter) - code) % len(alphabet)]
         cipher_txt += " "  # multiword connector
     print(f"The encoded text is {cipher_txt}")
 
