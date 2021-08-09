@@ -4,8 +4,8 @@ def encrypt(txt, code):
     cipher_txt = ""
     for item in txt:  # improving to get the multiwords result
         for letter in item:
-            # index = base.index(letter)  # not used
-            cipher_txt += alphabet[alphabet.index(letter) + code - len(alphabet)]
+            # cipher_txt += alphabet[alphabet.index(letter) + code - len(alphabet)]  # only for low numbers
+            cipher_txt += alphabet[(alphabet.index(letter) + code) % len(alphabet)]  # stolen variant (... % 26)
         cipher_txt += " "  # multiword connector
     print(f"The encoded text in {cipher_txt}")
 
