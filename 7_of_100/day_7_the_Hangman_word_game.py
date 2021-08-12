@@ -1,8 +1,7 @@
 # Step 4
 
 import random
-from replit import clear
-from day_7_art import stages, logo
+from day_7_art import stages, logo, clear
 from dictionary import word_list
 
 cur_word_list = word_list
