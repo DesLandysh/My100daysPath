@@ -7,7 +7,7 @@
     above 35 clinically obese
 """
 
-def a():
+def clear():
     print("\n" * 2)
 
 
@@ -27,7 +27,7 @@ elif 30 < bmi <= 35:
 else:
     print("This is clinically obese")
 
-a()
+clear()
 
 def p_result(i):
     tup = ('underweight', 'normal weight', 'overweight', 'obese', 'clinically obese')
