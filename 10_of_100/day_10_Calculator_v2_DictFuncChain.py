@@ -15,7 +15,7 @@ def do_mul(n1, n2):
 
 
 def do_div(n1, n2):
-    try:
+    try:  # Translated from my v1 version.
         return n1 / n2
     except ZeroDivisionError:
         return 0
@@ -59,7 +59,7 @@ def calculations():
         elif flag == 'n':
             should_continue = False
             calculations()
-        else:
+        else:  # Any other letter ('q') for exit from program (100 days of code didn't do this option)
             return None
 
 
