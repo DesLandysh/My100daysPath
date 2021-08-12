@@ -2,7 +2,7 @@
 
 - ---
 
-### Day 1.
+### Day 1
 ### Day 2:
 - Project: Tip calc for a group bill
 ### Day 3:
