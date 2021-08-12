@@ -4,7 +4,7 @@
 
 ### Day 1
 ### Day 2:
-- Project: Tip calc for a group bill
+- **Project**: Tip calc for a group bill
 ### Day 3:
 - Body Mass Index calculator
 - Is leap year checker
