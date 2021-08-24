@@ -1,5 +1,5 @@
 # My 100 days Path
-
+*lost over 12 days in sum*
 - ---
 
 ### Day 1
