@@ -17,6 +17,7 @@ from art import logo
 attempts = 0
 hidden_number = random.randint(1, 100)
 print(logo)
+print("I'm thinking of a number between 1 and 100")
 mode = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
 if mode == "easy":
     attempts = 10
