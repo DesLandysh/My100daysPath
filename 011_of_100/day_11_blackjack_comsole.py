@@ -9,8 +9,8 @@ def clear():
 
 def deal_the_cards(side):
     card = random.randint(0, len(from_deck))
-    print(card)
-    side += from_deck.get(deck[card])
+    # print(card)
+    side.append(from_deck.get(deck[card]))
     return side
 
 
