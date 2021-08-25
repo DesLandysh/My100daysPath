@@ -33,5 +33,8 @@
 ### Day 10:
 - flowchart included
 - **Project**: Leibniz's Calculator
+### Day 11:
+- flowchart included
+- **Keystone project**: Blackjack (Russian rules for 36-cards' deck, no hints used)
 
 
