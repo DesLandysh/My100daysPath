@@ -38,4 +38,5 @@
 - **Keystone project**: Blackjack (Russian rules for 36-cards' deck, no hints used)
 ### Day 12:
 - **Project**: Guess Number Game
+### Day 13
 
