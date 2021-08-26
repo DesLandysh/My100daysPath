@@ -39,4 +39,9 @@
 ### Day 12:
 - **Project**: Guess Number Game
 ### Day 13
-
+### Day 14:
+- my_struggles - working code before refactor
+- **Project**: Higher/Lower Game in main.py
+___
+Beginner stage ending
+___
