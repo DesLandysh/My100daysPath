@@ -1,5 +1,5 @@
 # My 100 days Path
-*lost over 12 days in sum*
+*lost 2-ish weeks: vacation, illness, home repairs, electricity breakdown and my lazyness*
 - ---
 
 ### Day 1
