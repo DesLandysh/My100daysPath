@@ -1,0 +1,59 @@
+# 1. Makes 3 hot flavors
+#   Espresso, Latte, Cappuccino
+# $1.50 Espresso = 50ml Water, 18g Coffee
+# $2.50 Latte = 200ml Water, 24g Coffeem 150ml milk
+# $3.00 Cappuccino = 250ml Water, 24g coffee, 100ml milk
+# resources: water 300ml, milk 200ml, coffee 100g
+
+# coin operated
+# $0.01 Penny = 1 cent,
+$0.05 Nickel - 5 cents,
+$0.10 Dime - 10 cents,
+$0.25 Quarter= 25 cents
+
+# Prog req
+# 1 Print report by word 'report'
+ (water: 200\n, milk, coffee, money $...)
+# 2 Check resources sufficient
+    #please insert coins
+    # how many Q..
+    # D..
+    # N..
+    # p...
+    #Here is $... in change
+    # here is your latte emoji Enjoy!
+# What would you like? (esp...ccio):...
+# report - new data included inserted money for the latte
+# # What would you like? (esp...ccio):...
+# cappiccino
+# Sorry there is not enough water
+
+
+list of commands (dict of functions):
+report
+help
+latte
+espresso
+cappuccino
+
+phrases:
+"What would you like? (espresso/latte/cappuccino): "
+
+"""Water: {water}ml
+Milk: {milk}ml
+Coffee: {coffee}g
+Money: ${money}"""
+
+"Sorry there is not enough {key} "
+"Sorry that's not enough money. Money refunded. "
+
+"Please insert coins"
+
+"How many quarters?: "
+"How many dimes?: "
+"How many nickles?: "
+"How many pennies?: "
+
+"Here is ${money} in change."
+
+"Here is your {product} Enjoy!"
