@@ -3,9 +3,9 @@
 # + 1. Dict of recipies of ingridients
 # + 2. Dict of coins
 # + 3. List of commands (report, help, order of coffee by name)
-# 4. Coin operations (counting inserted sum and then change after the order)
+# + 4. Coin operations (counting inserted sum and then change after the order)
 # 5. Check if resources are enough to make a coffee
-# 6. Print out info
+# + 6. Print out info
 
 
 def p_help():
