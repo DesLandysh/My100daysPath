@@ -1,20 +1,11 @@
 # Coffee Machine Program emulator
 
-# + 1. Dict of recipies of ingridients
-# + 2. Dict of coins
-# + 3. List of commands (report, help, order of coffee by name)
-# + 4. Coin operations (counting inserted sum and then change after the order)
-# 5. Check if resources are enough to make a coffee
-# + 6. Print out info
-
-
 def p_help():
     print(f"""
 Type 'report' to get info about resources.
-Type 'cappuccino' to order cappuccino (250ml Water, 24g Coffee, 100ml Milk)
-Type 'espresso' to order espresso (50ml Water, 18g Coffee)
-Type 'latte' to order latte (200ml Water, 24g Coffee, 150ml Milk)
-Type 'change' to refund. 
+Type 'cappuccino' to order cappuccino (250ml Water, 24g Coffee, 100ml Milk, $3.00)
+Type 'espresso' to order espresso (50ml Water, 18g Coffee, $1.50)
+Type 'latte' to order latte (200ml Water, 24g Coffee, 150ml Milk, $2.50)
 """)
 
 
@@ -28,31 +19,35 @@ Money: ${money_2decimal}
 """)
 
 
+def check_resources(of_receipt, resources_):
+    if resources_.get("water") - of_receipt[1] > 0:
+        if resources_.get("milk") - of_receipt[2] > 0:
+            if resources_.get("coffee") - of_receipt[3] > 0:
+                if resources_.get("money") - of_receipt[4] > 0:
+                    return True
+                else:
+                    printer("money")
+            else:
+                printer("coffee")
+        else:
+            printer("milk")
+    else:
+        printer("water")
+    return False
+
+
 def make_coffee(of_receipt, resources_):
     add_coins(resources_)
-    # print(resources_)
-    # checked = False
-    # for i in range(len(of_receipt) - 1):
-    #     print(i)
-    #     if i == 0:
-    #         continue
-    #     for k in resources_:
-    #         print(resources_.get(f"{k}") - of_receipt[i])
-    #         if resources_.get(f"{k}") - of_receipt[i] > 0:
-    #             checked = True
-    #             continue
-    #         else:
-    #             printer(k)
-    #             checked = False
-    # if checked:
-    water = resources_.get("water") - of_receipt[1]
-    milk = resources_.get("milk") - of_receipt[2]
-    coffee = resources_.get("coffee") - of_receipt[3]
-    money = resources_.get('money') - of_receipt[4]
-    resources_.update({"water": water, "milk": milk, "coffee": coffee, "money": money})
-    print(f"Here's your {of_receipt[0]}. Enjoy")
-    print(f'Here is ${round(resources_.get("money"),2)} in change')
-    return resources_
+    checked = check_resources(of_receipt, resources_)
+    if checked:
+        water = resources_.get("water") - of_receipt[1]
+        milk = resources_.get("milk") - of_receipt[2]
+        coffee = resources_.get("coffee") - of_receipt[3]
+        money = resources_.get('money') - of_receipt[4]
+        resources_.update({"water": water, "milk": milk, "coffee": coffee, "money": money})
+        print(f"Here's your {of_receipt[0]}. Enjoy")
+        print(f'Here is ${round(resources_.get("money"),2)} in change')
+        return resources_
 
 
 def add_coins(resources_):
@@ -73,7 +68,6 @@ def add_coins(resources_):
 
 
 def event_listener(key, of_receipt, resources_):
-    # print(key, of_receipt[f"{key}"])
     operations = {
         "latte": make_coffee,
         "cappuccino": make_coffee,
@@ -94,7 +88,6 @@ def asker():
         report(resources)
         asker()
     elif key in keys:
-        # print(key)
         return key
     else:
         asker()
@@ -125,7 +118,6 @@ coins = {
     "nickles": 0.05,
     "pennies": 0.01,
 }
-
 
 oper_key = asker()
 resources = event_listener(oper_key, receipt, resources)
