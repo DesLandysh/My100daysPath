@@ -30,6 +30,7 @@ CoffeeMaker Class has three methods
         checks if ingredients are enough to make coffee...
             and it very OBVIOUS that "drink" is "MenuItem",
                     for the same global object same local name? Nah!
+            and what's the can_make variable?
     make_coffee(order)
         order is the same MenuItem. Nice!
             yes, MenuItem, order_name, drink, order are the same obj.

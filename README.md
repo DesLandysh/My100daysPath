@@ -47,3 +47,6 @@ Beginner stage ending
 ___
 ### Day 15:
 - **Project**: Coffee Machine Program Emulator
+### Day 16:
+- tech docs review
+- **Project**: Coffee Machine OOP version
