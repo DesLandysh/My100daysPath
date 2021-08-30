@@ -37,7 +37,7 @@ def check_resources(of_receipt, resources_):
 
 
 def make_coffee(of_receipt, resources_):
-    add_coins(resources_)
+    resources_ = add_coins(resources_)
     checked = check_resources(of_receipt, resources_)
     if checked:
         water = resources_.get("water") - of_receipt[1]
@@ -68,19 +68,13 @@ def add_coins(resources_):
 
 
 def event_listener(key, of_receipt, resources_):
-    operations = {
-        "latte": make_coffee,
-        "cappuccino": make_coffee,
-        "espresso": make_coffee,
-    }
-    execute_function = operations[f"{key}"]
-    resources_ = execute_function(of_receipt[f"{key}"], resources_)
+    resources_ = make_coffee(of_receipt[f"{key}"], resources_)
     return resources_
 
 
 def asker():
-    keys = ["latte", "cappuccino", "espresso"]
-    key = input("What would you like? 'cappuccino'/'latte'/'espresso' or type 'help': ")
+    keys = ["latte", "cappuccino", "espresso", "off"]
+    key = input("What would you like? 'cappuccino'/'latte'/'espresso' or type 'help': ").lower()
     if key == "help":
         p_help()
         asker()
@@ -106,7 +100,6 @@ resources = {
     "coffee": 50,
     "money": 0.00,
 }
-
 receipt = {
     "cappuccino": ["cappuccino", 250, 100, 24, 3.00],
     "espresso": ["espresso", 50, 0, 18, 1.50],
