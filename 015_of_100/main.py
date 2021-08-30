@@ -119,5 +119,10 @@ coins = {
     "pennies": 0.01,
 }
 
-oper_key = asker()
-resources = event_listener(oper_key, receipt, resources)
+off = False
+while not off:
+    oper_key = asker()
+    if oper_key == "off":
+        off = True
+    else:
+        resources = event_listener(oper_key, receipt, resources)

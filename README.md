@@ -45,3 +45,5 @@
 ___
 Beginner stage ending
 ___
+### Day 15:
+- **Project**: Coffee Machine Program Emulator
