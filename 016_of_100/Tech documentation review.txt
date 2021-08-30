@@ -1,0 +1,50 @@
+1.
+Documentation says there is MenuItem Class that takes
+    name: str,
+    cost: float
+    and ingredients: dict
+            e.g. {"water": int, "coffee": int}
+        HOWEVER: in menu.py it takes attrs in this order:
+            name, water, milk, coffee, cost
+                and only them it converts
+                    to name, cost and dict of ingredients
+
+2.
+Class Menu already have MenuItem list of needed coffee receipts
+        in this sequence: [name, water, milk, coffee, cost]
+            Probably, to insert to MenuItem obj.
+    It has two methods:
+        get_items() - returns all names as a concatenated str
+        find_drink(order_name), returns MenuItem obj, if it exists.
+    So, Menu Class is the starter class...
+        and it's not even wrote in docs...
+            I've already passed the half of all docs
+
+3.
+CoffeeMaker Class has three methods
+    report() print resources
+                        without money
+        Stack of resources defies in class, but there's not even
+                                            a line or a word about it.
+    is_resource_sufficient(drink)
+        checks if ingredients are enough to make coffee...
+            and it very OBVIOUS that "drink" is "MenuItem",
+                    for the same global object same local name? Nah!
+    make_coffee(order)
+        order is the same MenuItem. Nice!
+            yes, MenuItem, order_name, drink, order are the same obj.
+        it just reduces resources
+            no money...
+
+4.
+MoneyMachine Class! At least!
+    report() another report for money
+    make_payment(cost) - Wow, "cost fo the drink"...
+            also known as order, also known as...
+        although it returns Bool-value and print statements
+            nowhere wrote that it also runs process_coins() method to
+                ask for insert coins and calculate them and get refund.
+
+5.
+Why actual code is more clear to understand
+                than documentation it covered?
