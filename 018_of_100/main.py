@@ -3,9 +3,12 @@ from turtle import Turtle, Screen
 des = Turtle()
 des.shape("turtle")
 # des.color("coral")
-for i in range(4):
-    des.right(90)
-    des.forward(100)
+for i in range(50):
+    if i % 2 == 0:
+        des.penup()
+        des.forward(5)
+    des.pendown()
+    des.forward(5)
 
 
 
