@@ -50,3 +50,5 @@ ___
 ### Day 16:
 - tech docs review
 - **Project**: Coffee Machine OOP version
+### Day 17:
+- **Project**: Quiz True/False
